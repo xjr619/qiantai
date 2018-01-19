@@ -7,7 +7,6 @@ let noLoginCheckPage = [
     'shopcart'
 ]
 export default function (to, from, next) {
-    console.log(to);
     var toPageName = to.name;
     if (noLoginCheckPage.some(v => v == toPageName)) {
         next();

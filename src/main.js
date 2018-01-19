@@ -12,6 +12,7 @@ import router from './router'
 import api from './js/api-config.js'
 // 导入全局样式
 import './less/index.less'
+import './css/style.css'
 // 使用第三方包
 Vue.use(ElementUI)
 Vue.use(Vuex)

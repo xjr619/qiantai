@@ -5,14 +5,14 @@
          <el-form label-position="left" label-width="80px" ref="ruleForm2" 
              :model="formLabelAlign" :rules="rules">
              <!-- 如果要表单校验与重置功能, 必须加上prop属性 -->
-             <el-form-item label="账号" prop="uname">
-              <el-input v-model="formLabelAlign.uname"></el-input>
+             <el-form-item label="账号" prop="user_name">
+              <el-input v-model="formLabelAlign.user_name"></el-input>
              </el-form-item>
-             <el-form-item label="密码" prop="upwd">
-                 <el-input v-model="formLabelAlign.upwd"></el-input>
+             <el-form-item label="密码" prop="password">
+                 <el-input v-model="formLabelAlign.password"></el-input>
              </el-form-item>
              <el-form-item>
-                <el-button type="primary" @click="submitForm('ruleForm2')">立即创建</el-button>
+                <el-button type="primary" @click="submitForm('ruleForm2')">登录</el-button>
                  <el-button @click="resetForm('ruleForm2')">重置</el-button>
              </el-form-item>
          </el-form>
@@ -44,20 +44,20 @@
             return {
                 // 表单提交的数据
                  formLabelAlign: {
-                     uname: '',
-                     upwd: ''
+                     "user_name": '',
+                     "password": ''
                  },
  
                  // 表单校验规则
                  rules: {
-                     uname: [ 
+                     user_name: [ 
                          { required: true, message: '请填写账号', trigger: 'blur' },
-                         { min: 5, max: 18, message: '账号在5~18位', trigger: 'blur' },
-                         { validator: unameFn, trigger: 'blur' } 
+                        //  { min: 5, max: 18, message: '账号在5~18位', trigger: 'blur' },
+                        //  { validator: unameFn, trigger: 'blur' } 
                      ],
-                   upwd: [ 
+                   password: [ 
                         { validator: upwdFn, trigger: 'blur' },
-                        { pattern: /^\w{6,18}$/, message: '密码在6~18位', trigger: 'blur' },
+                        // { pattern: /^\w{6,18}$/, message: '密码在6~18位', trigger: 'blur' },
                     ]
                 }
             }

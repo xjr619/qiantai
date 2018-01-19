@@ -1,7 +1,9 @@
 <template>
   <div>
+    <!-- 头部 -->
 <app-header></app-header>
 <router-view></router-view>
+<!-- 底部 -->
 <app-footer></app-footer>
   </div>
 </template>
